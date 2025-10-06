@@ -1476,7 +1476,7 @@
           "type": "prometheus",
           "uid": "${DS_PROMETHEUS}"
         },
-        "definition": "label_values(cs_info, instance)",
+        "definition": "label_values(cs_info{container=\"crowdsec-agent\"},instance)",
         "hide": 0,
         "includeAll": false,
         "label": "instance",
@@ -1484,7 +1484,7 @@
         "name": "instance",
         "options": [],
         "query": {
-          "query": "label_values(cs_info, instance)",
+          "query": "label_values(cs_info{container=\"crowdsec-agent\"},instance)",
           "refId": "Prometheus-instance-Variable-Query"
         },
         "refresh": 1,
