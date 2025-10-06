@@ -1150,7 +1150,7 @@
                 "type": "prometheus",
                 "uid": "${DS_PROMETHEUS}"
               },
-              "expr": "sum(increase(cs_bucket_created_total{instance=\"$instance\"}[$__interval])) by (name)",
+              "expr": "sum(increase(cs_bucket_instantiation_total{instance=\"$instance\"}[$__interval])) by (name)",
               "interval": "",
               "intervalFactor": 2,
               "legendFormat": "{{name}}",
